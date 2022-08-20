@@ -7,9 +7,10 @@
 #define RANDBTW(a,b) (rand()%((b)-(a)+1)+(a))
 #define ARGCMP(a,b,c) ( (strcmp( (a),(b) ) & strcmp( (a),(c) ) ) == 0)
 #define OUTPUT(x,...) //printf(x,##_VA_ARGS_)	//for debug
-#define USAGE_TEXT "usage: ./a.out ([-l|--length] <length>) ([-w|--width] <width>)\n" \
+#define USAGE_TEXT "usage: %s ([-l|--length] <length>) ([-w|--width] <width>)\n" \
 				"([--genmin] <genmin>)([--genmax] <genmax>])\n" \
-				"./a.out [-h|--help]"
+				"%s [-h|--help]" \
+				, argv[0], argv[0]
 
 int length = 4, width = 4;//length==x, width==y
 int score = 0, step = 0;
