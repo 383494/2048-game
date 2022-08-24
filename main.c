@@ -5,7 +5,7 @@
 #include <time.h>
 
 #define RANDBTW(a,b) (rand()%((b)-(a)+1)+(a))
-#define ARGCMP(a,b,c) ( (strcmp( (a),(b) ) & strcmp( (a),(c) ) ) == 0)
+#define ARGCMP(a,b,c) ( strcmp((a),(b)) == 0 || strcmp((a),(c)) == 0)
 #define OUTPUT(x,...) //printf(x,##_VA_ARGS_)	//for debug
 #define USAGE_TEXT "usage: %s ([-l|--length] <length>) ([-w|--width] <width>)\n" \
 				"([--genmin] <genmin>)([--genmax] <genmax>])\n" \
